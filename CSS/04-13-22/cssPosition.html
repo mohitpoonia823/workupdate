@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* div{
+            position: static;
+            border: 1px solid green;
+        } */
+        div.relative{
+            position: relative;
+            background-color: green;
+            color: white;
+            width: 400px;
+            height: 200px;
+            border: 2px solid red;
+        }
+        div.absolute{
+            position: absolute;
+            background-color: aqua;
+            color: black;
+            width: 150px;
+            height: 70px;
+            top: 50%;
+            right: 60px;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>css positions</h1>
+    <div class="relative">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
+      temporibus.
+      <div class="absolute">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, expedita.
+      </div>
+    </div>
+  </body>
+</html>
