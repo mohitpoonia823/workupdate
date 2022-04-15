@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* ul{
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          background-color: aqua;
+      }
+      ul li{
+          display: inline-block;
+          padding: 10px;
+        background-color: aqua; 
+        text-align: center;
+       }
+       li:hover{
+           background-color: black;
+           color: white;
+       } */
+      .nav ul{
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          background-color: gainsboro;
+          width: 300px;
+          height: 100%;
+          position: fixed;
+          overflow: auto;
+      }
+      .nav ul li{
+          display: block;
+          padding: 10px;
+      }
+      .nav ul li.active{
+          background-color: green;
+      }
+      .nav ul li:hover:not(.active){
+          background-color: aquamarine;
+      }
+    </style>
+</head>
+<body>
+    <!-- horixental navbar
+    <div>
+        <ul>
+            <li>Home</li>
+            <li>Menu</li>
+            <li>About</li>
+            <li style="float:right">Contact</li>
+        </ul>
+    </div> -->
+    <!-- vertical navbar -->
+    <div class="nav">
+        <ul>
+            <li class="active">Home</li>
+            <li>Menu</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+        <h2>Fixed Full-height Side Nav</h2>
+        <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+        <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+        <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+      </div>
+</body>
+</html>
