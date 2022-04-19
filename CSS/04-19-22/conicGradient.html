@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .one {
+        display: inline-block;
+        margin-left: 50px;
+        height: 300px;
+        width: 300px;
+        background-color: red; /* For browsers that do not support gradients */
+        background-image: conic-gradient(red, yellow, green);
+      }
+      .two {
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 10px;
+        height: 300px;
+        width: 300px;
+        background-image: conic-gradient(brown, yellow, red, blue, orange);
+        border-radius: 50%;
+      }
+      .three {
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 10px;
+        height: 300px;
+        width: 300px;
+        background-image: repeating-conic-gradient(blue 10%, yellow 30%);
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+  </body>
+</html>
