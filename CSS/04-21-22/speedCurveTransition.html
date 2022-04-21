@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin-bottom: 5px;
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            transition: width 2s;
+            transition-delay: 1s;
+        }
+        #a{
+            transition-timing-function: linear;
+        }
+        #b{
+            transition-timing-function: ease;
+        }
+        #c{
+            transition-timing-function: ease-in;
+        }
+        #c{
+            transition-timing-function: ease-out;
+        }
+        #c{
+            transition-timing-function: ease-in-out;
+        }
+        div:hover{
+         width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">Linear</div>
+    <div id="b">ease</div>
+    <div id="c">ease-in</div>
+    <div id="d">ease-out</div>
+    <div id="e">ease-in-out</div>
+</body>
+</html>
