@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: pink;
+      }
+
+      @media screen and (min-width: 480px) {
+        body {
+          background-color: lightgreen;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Style the top navigation bar */
+      .navbar {
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      /* Style the topnav links */
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      /* Change color on hover */
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .navbar a {
+          float: none;
+          width: 100%;
+        }
+      }
+
+      /* Hide the div element */
+      @media screen and (max-width: 600px) {
+        div.hide {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>media queries</h1>
+    <p>changing background color when screen size is less then 480px</p>
+
+    <h3>Resize window to see the changes</h3>
+    <div class="navbar">
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+    </div>
+
+    <div class="hide">
+      <h1>hide me</h1>
+    </div>
+  </body>
+</html>
