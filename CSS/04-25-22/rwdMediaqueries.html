@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      [class*="col-"] {
+        float: left;
+        padding: 15px;
+      }
+      .col-3 {
+        width: 25%;
+      }
+
+      .header {
+        padding: 20px;
+        border: 1px solid green;
+        background-color: blueviolet;
+      }
+      .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      .menu li {
+        padding: 8px;
+        margin-bottom: 7px;
+        background-color: #33b5e5;
+        color: #ffffff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      }
+      .main {
+        margin-top: 10px;
+        width: 75%;
+        float: left;
+        padding: 15px;
+      }
+      .menu li:hover {
+        background-color: #0099cc;
+      }
+
+      /* for small screen devices we are adding breakpoints */
+      @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        [class*="col-"] {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>This is header.</h1>
+    </div>
+    <div class="col-3 menu">
+      <ul>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+      </ul>
+    </div>
+    <div class="main">
+      <h1>Main Content is here</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque quos
+        cumque, aliquam dicta nulla velit aspernatur quod sit quae praesentium.
+      </p>
+    </div>
+  </body>
+</html>
