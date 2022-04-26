@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+      const cars = ["Saab", "Volvo", "BMW"];
+
+      // You can change an element:
+      cars[0] = "Toyota";
+
+      // You can add an element:
+      cars.push("Audi");
+
+      document.getElementById("demo").innerHTML = cars;
+
+      // You can create a const object:
+      const car = { type: "Fiat", model: "500", color: "white" };
+
+      // You can change a property:
+      car.color = "red";
+
+      // You can add a property:
+      car.owner = "Johnson";
+
+      document.getElementById("demo1").innerHTML =
+        "Car model is : " + car.model;
+
+      //Resaaigning the const variable
+
+    //   {
+    //     const x = 2; // Allowed
+    //     const x = 2; // Not allowed
+    //   }
+    </script>
+  </body>
+</html>
