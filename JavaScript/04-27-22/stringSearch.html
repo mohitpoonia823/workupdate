@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+      let str = "Please locate where 'locate' occurs!";
+      let res = str.indexOf("locate");
+      let res1 = str.lastIndexOf("locate");
+      document.getElementById("demo").innerHTML = "Index value is : " + res;
+      document.getElementById("demo1").innerHTML =
+        "Index value of last occurence is : " + res1;
+
+        // search method is used
+      let str1 = "Please locate where 'locate' occurs!";
+     let res2 = str1.search("locate");
+      document.getElementById("demo2").innerHTML = "Index value is : " + res2;
+
+    //   some other mehods with samne functionality are
+    // startWith
+    // endWith
+    // match
+    // include
+
+    </script>
+  </body>
+</html>

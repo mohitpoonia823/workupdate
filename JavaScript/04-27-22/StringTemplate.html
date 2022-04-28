@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+      <h1>Stirng Template</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+      // using back-tick
+      let text = `Hello Programmers!`;
+      let text1 = `Hello's programmers of "India"`;
+      document.getElementById("demo").innerHTML = text;
+      document.getElementById("demo1").innerHTML = text1;
+
+      //   multiline String
+      let text2 = `The quick
+                   brown fox
+                   jumps over
+                   the lazy dog`;
+
+       let firstName = "sahil";
+       let lastName = "Kumar";
+       let fullName = `Welcome ${firstName+lastName} ` ;
+       document.getElementById("demo2").innerHTML = fullName;
+           
+    </script>
+  </body>
+</html>

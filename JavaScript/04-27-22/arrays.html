@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+      const cars = ["Saab", "Volvo", "BMW"];
+      // can also create array like this
+
+      //   const cars = [];
+      //   cars[0] = "Saab";
+      //   cars[1] = "Volvo";
+      //   cars[2] = "BMW";
+
+      // with new keyword , no need to create array like this
+      // const cars = new Array("Saab", "Volvo", "BMW");
+
+      document.getElementById("demo").innerHTML = cars;
+      document.getElementById("demo1").innerHTML =
+        "Accessing value at index 1 : " + cars[1];
+
+      const mymodel = { name: "BMW", model: 26543, color: "white" };
+      //   Array element can be object
+      cars[2] = mymodel;
+      document.getElementById("demo2").innerHTML =
+        "Accessing object value at index 2 in array : " + cars[2].model;
+
+      const fruits = ["Banana", "Orange", "Apple"];
+      fruits.push("Lemon"); // Adds a new element (Lemon) to fruits
+      document.getElementById("demo3").innerHTML = fruits;
+
+    </script>
+  </body>
+</html>

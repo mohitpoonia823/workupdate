@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <script>
+      // converting array to string
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo").innerHTML = fruits.toString();
+
+      //   specify the seperator
+      document.getElementById("demo1").innerHTML = fruits.join("-");
+
+      //   pop element
+      fruits.pop();
+      document.getElementById("demo2").innerHTML =
+        "Pop mango from array : " + fruits.toString();
+
+      // push element in array
+      fruits.push("Kiwi");
+      document.getElementById("demo3").innerHTML =
+        "Add kiwi in array : " + fruits.toString();
+
+      // Shift  remove first element and sheft all other elements
+
+      fruits.shift();
+      document.getElementById("demo4").innerHTML =
+        "Shifting in array(Removing banana) : " + fruits;
+
+      // unsift add element att first and shift all elements
+      fruits.unshift("Lemon");
+      document.getElementById("demo5").innerHTML =
+        "Shifting in array(Adding Lemon) : " + fruits;
+
+      // delete the element
+      // not recommended
+      let res = delete fruits[1];
+      document.getElementById("demo6").innerHTML =
+        "deleting the element at index 1 : " + fruits;
+
+      const myGirls = ["Cecilie", "Lone"];
+      const myBoys = ["Emil", "Tobias", "Linus"];
+
+      const myChildren = myGirls.concat(myBoys);
+      document.getElementById("demo7").innerHTML =
+        "concatinating array : " + myChildren;
+    </script>
+  </body>
+</html>

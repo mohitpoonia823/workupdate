@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+      let txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      //   length method
+      let length = txt.length;
+      document.getElementById("demo").innerHTML =
+        "Length of String is : " + length;
+
+      // slice method
+      let str = "Apple, Banana, Kiwi";
+      let part = str.slice(7, 13);
+      document.getElementById("demo1").innerHTML =
+       " Slice of String is : " + part;
+
+      // substring method
+      let str1 = "Apple, Banana, Kiwi";
+      let part1 = str.substring(7, 13);
+      document.getElementById("demo2").innerHTML =
+        "SubString of String is : " + part1;
+
+      // replace
+      let text = "Please visit Microsoft!";
+      let newText = text.replace("Microsoft", "W3Schools");
+      document.getElementById("demo3").innerHTML =
+        "Replacement in String is : " + newText;
+
+      // toUpperCase method
+      let text1 = "Hello World!";
+      let text2 = text1.toUpperCase();
+      document.getElementById("demo4").innerHTML =
+        "upperCase of String is : " + text2;
+
+      // trim method
+      let a = "      Hello World!      ";
+      let b = text1.trim();
+      document.getElementById("demo5").innerHTML =
+        "Trim space from String is : " + length;
+
+    </script>
+  </body>
+</html>

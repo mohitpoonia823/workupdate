@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="todayDate()">Time is?</button>
+    <button onmouseenter="changeBackground()">check it</button>
+    <!-- some other are -->
+    <!-- onmouseout
+   onkeydown
+   onchange
+   onload
+   etc -->
+    <p id="demo"></p>
+    <p id="demo1">This is onfocus</p>
+    <script>
+      function todayDate() {
+        document.getElementById("demo").innerHTML = Date();
+      }
+      function changeBackground() {
+        document.getElementById("demo1").style.backgroundColor = "red";
+      }
+    </script>
+  </body>
+</html>

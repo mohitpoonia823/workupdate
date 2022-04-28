@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+      // toString
+      let y = 43;
+      // y.toString();
+      document.getElementById("demo").innerHTML = y.toString();
+
+      // toExponential()
+      let x = 9.453;
+      document.getElementById("demo1").innerHTML = x.toExponential(4);
+
+      // toFixed()
+      let z = 2.453;
+      document.getElementById("demo2").innerHTML = z.toFixed(2);
+
+      // toPrecision()
+      //return a string with a number return in specied length
+      let z1 = 2.453;
+      document.getElementById("demo3").innerHTML = z1.toPrecision(4);
+
+      // Number() method used to convert in number
+      document.getElementById("demo4").innerHTML =
+        Number(true) +
+        "<br>" +
+        Number(false) +
+        "<br>" +
+        Number("10") +
+        "<br>" +
+        Number("  10") +
+        "<br>" +
+        Number("10  ") +
+        "<br>" +
+        Number(" 10  ") +
+        "<br>" +
+        Number("10.33") +
+        "<br>" +
+        Number("10,33");
+
+      //  parseInt() and parseFloat is also used to convert the String into numbers
+
+      //    max value of number
+      let x1 = Number.MAX_VALUE;
+      document.getElementById("demo5").innerHTML ="Largest possible number in javascript"+ x1;
+    </script>
+  </body>
+</html>

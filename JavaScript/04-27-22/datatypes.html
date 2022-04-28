@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p id="string"></p>
+    <p id="num"></p>
+    <P id="arr"></P>
+    <P id="arr"></P>
+    <P id="object"></P>
+    <script>
+        // String dtaatypes
+        let a = "Hello"
+        document.getElementById("string").innerHTML="The data gave string datatype "+a;
+        // number datatypes
+        let b = 23.5;
+        document.getElementById("num").innerHTML="The data gave number datatype "+b;
+
+        // Object datatype
+        const person = {name:"mohit",age:23,city:"hisar"};
+        document.getElementById("object").innerHTML="The data gave object datatype: "+person.age;
+
+        // array
+        const cars = ["i20","maruti","ford"];
+        document.getElementById("arr").innerHTML="The data gave array datatype : "+cars;
+
+    </script>
+</body>
+</html>
