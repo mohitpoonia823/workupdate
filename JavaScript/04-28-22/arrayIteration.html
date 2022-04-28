@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array Iteration</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <script>
+      // using foreach
+      const numbers = [45, 4, 50, 9, 16, 25];
+      let txt = "";
+      numbers.forEach(myFunction);
+
+      function myFunction(value) {
+        txt += value + "<br>";
+      }
+      document.getElementById("demo").innerHTML = txt;
+
+      //   using map function
+      const num2 = numbers.map(myFunction1);
+      function myFunction1(value) {
+        return value * 2;
+      }
+      document.getElementById("demo1").innerHTML =
+        "Iteration using map function : " + num2;
+
+      //   Array filter
+      const num3 = numbers.filter(myFunction2);
+      function myFunction2(value) {
+        return value > 10;
+      }
+      document.getElementById("demo2").innerHTML =
+        "value is greater then 10(filter method) : " + num3;
+
+      //   Array reduce method
+      const sum = numbers.reduce(myFunction3);
+      function myFunction3(total, value) {
+        return total + value;
+      }
+      document.getElementById("demo3").innerHTML =
+        "Sum of elements is  : " + sum;
+
+      //   Array every function
+      //every will check the condiion on all elements
+      // we can use some() function, which check if some array value passs test
+      const res = numbers.every(myFunction4);
+      function myFunction4(total, value) {
+        return value > 10;
+      }
+      document.getElementById("demo4").innerHTML = " All over 10  is  : " + res;
+
+      //   find function - first occurenece will return
+      const res1 = numbers.find(myFunction5);
+      function myFunction5(value) {
+        return value > 10;
+      }
+      document.getElementById("demo5").innerHTML = " resuult is : " + res1;
+
+      //   Array.from() to create a array from string
+      const myArr = Array.from("ABCDEFG");
+      document.getElementById("demo6").innerHTML =
+        "Creating array from string : " + myArr;
+
+      //   using keys()
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      const keys = fruits.keys();
+      let text = "";
+      for (let x of keys) {
+        text += x + "<br>";
+      }
+      document.getElementById("demo7").innerHTML =  text;
+
+    </script>
+  </body>
+</html>

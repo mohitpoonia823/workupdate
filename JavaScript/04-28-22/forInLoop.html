@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+      <h1>For in loops</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+      // for in over object
+      const person = { fname: "John", lname: "Doe", age: 25 };
+
+      let txt = "";
+      for (let x in person) {
+        txt += person[x] + " ";
+      }
+
+      document.getElementById("demo").innerHTML = txt;
+
+      //   for in over array
+      const numbers = [45, 4, 9, 16, 25];
+
+      let txt1 = "";
+      for (let x in numbers) {
+        txt1 += numbers[x] + " ";
+      }
+      document.getElementById("demo1").innerHTML = txt1;
+
+      //   for each
+      const numbers1 = [45, 11, 432, 16, 25];
+
+      let txt2 = "";
+      numbers1.forEach(myFunction);
+
+      function myFunction(value, index, array) {
+        txt2 += value + " ";
+      }
+      document.getElementById("demo2").innerHTML = txt2;
+
+    </script>
+  </body>
+</html>

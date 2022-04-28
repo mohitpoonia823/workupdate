@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dates methods</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+       const d = new Date();
+   
+       document.getElementById("demo").innerHTML = d.toString();
+       document.getElementById("demo1").innerHTML = "Date in String format : " + d.toUTCString();
+       document.getElementById("demo2").innerHTML = d.toDateString();
+       document.getElementById("demo3").innerHTML = " using the ISO standard format : "+ d.toISOString();
+       
+    </script>
+</body>
+</html>
