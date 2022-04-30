@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Try Catch</h1>
+    <p>Please input a number between 5 and 10:</p>
+   
+    <input id="demo1"  type="text">
+    <button type="button" onclick="myfunction()">Test Input</button>
+    <p id="message"></p>
+    <p id="demo"></p>
+    <script>
+          
+        function myfunction(){
+           const message = document.getElementById("message");
+           message.innerHTML = "";
+           let x = document.getElementById("demo1").value;
+           try {
+               if(x == "") throw "empty";
+               if(isNaN(x)) throw "Not a number";
+               x = Number(x);
+               if(x < 5) throw "too low";
+               if(x > 10) throw "too high";
+           } catch (error) {
+               message.innerHTML = "input is " + error;
+           }
+        }
+         
+        
+
+        try {
+            addlert("hello slert")
+        } catch (error) {
+            document.getElementById("demo").innerHTML = error.message;
+        }
+
+
+    </script>
+</body>
+</html>

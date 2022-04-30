@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+      // Create a Set
+      const letters = new Set(["a", "b", "c"]);
+      let text = "";
+    //   using for each to iterate
+      letters.forEach(function (value) {
+        text += value + "<br>";
+      });
+      // Display set.size
+      document.getElementById("demo").innerHTML = text;
+
+      //   also we can create
+      const letters1 = new Set();
+
+      // Add Values to the Set
+      letters.add("a");
+      letters.add("b");
+      letters.add("c");
+      document.getElementById("demo1").innerHTML = letters.size;
+
+      //   no duplication on allowed
+    </script>
+  </body>
+</html>

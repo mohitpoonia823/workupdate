@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+      // NUmber
+      // parseInt
+      //parseFloat is used to convet the String to number
+      let a = "233";
+      let b = Number(a);
+      document.getElementById("demo").innerHTML =
+        "type of a is : " + typeof a + "<br> type of b is : " + typeof b;
+
+      // unary operator
+      let y = "5";
+      let x = +y;
+      document.getElementById("demo1").innerHTML =
+        "type of y is : " + typeof y + "<br>  type of x is : " + typeof x;
+
+      // number to string
+      // toString() also can be use
+      let x1 = 123;
+      document.getElementById("demo2").innerHTML =
+        String(x1) + "<br>" + String(123) + "<br>" + String(100 + 23);
+
+      //   dates to number / string   
+      let d = new Date();
+    // let dt =  Number(d);
+      let dt1 =  String(d); //toString can also be used
+      document.getElementById("demo3").innerHTML = typeof dt1;
+    </script>
+  </body>
+</html>

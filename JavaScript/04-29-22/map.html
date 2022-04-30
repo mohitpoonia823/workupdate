@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <script>
+      // Create a Map
+      const fruits = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200],
+      ]);
+
+      //   can also set value with set method
+      fruits.set("mango", 100);
+      fruits.set("grapes", 700);
+      fruits.set("waterlemon", 120);
+
+      document.getElementById("demo").innerHTML = fruits.get("apples");
+      document.getElementById("demo1").innerHTML = fruits.size;
+      fruits.delete("apples");
+      document.getElementById("demo2").innerHTML = fruits.size;
+      let res = fruits.has("apples");
+      document.getElementById("demo3").innerHTML = res;
+      let text = "";
+      fruits.forEach(function (value, key) {
+        text += key + " = " + value +"<br>";
+      });
+      document.getElementById("demo4").innerHTML = text ;
+
+    </script>
+  </body>
+</html>
