@@ -7,23 +7,33 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>this keyword</h1>
+<h1>Object Accessors</h1>
     <p id="demo"></p>
+    <p id="demo1"></p>
 
     <script>
-
       // Create an object:
       const person = {
         firstName: "John",
         lastName: "Doe",
-        id: 5566,
-        fullName : function() {
+        language: "",
+        // using getter
+        get fullName() {
           return this.firstName + " " + this.lastName;
-        }
-      };
+        },
 
-      // Display data from the object:
-      document.getElementById("demo").innerHTML = person.fullName();
+
+        // using setter
+        set lang(lang) {
+          this.language = lang.toUpperCase();
+        },
+      };
+      person.lang = "en";
+
+      // Display data from the object using a getter:
+      document.getElementById("demo").innerHTML = person.fullName;
+      document.getElementById("demo1").innerHTML = person.language;
+
     </script>
   </body>
 </html>

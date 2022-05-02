@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+      const person = {
+        firstname: "John",
+        lastname: "Doe",
+        age: 50,
+        eyecolor: "blue",
+        family : {
+            fatherName : "Sunil",
+            motherName:  "Sushma",
+        }
+      };
+
+    //   adding new property
+        person.nationality = "English";
+
+        // deleting property
+        delete person.eyecolor;
+
+      document.getElementById("demo").innerHTML =
+        person.firstname + " is " + person.age + " years old and his father name is "+ person.family.fatherName;
+
+      let txt = "";
+      for (let x in person) {
+        txt += person[x] + " ";
+      }
+
+      document.getElementById("demo1").innerHTML = txt;
+    </script>
+  </body>
+</html>

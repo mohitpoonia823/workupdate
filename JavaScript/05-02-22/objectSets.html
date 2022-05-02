@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>JavaScript Sets</h2>
+    <p>Create a Set from an Array:</p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+      // Create a Set
+      const letters = new Set(["a", "b", "c"]);
+
+      // Display set.size
+      document.getElementById("demo").innerHTML = letters.size;
+
+      let text = "";
+      letters.forEach(function (value) {
+        text += value + "<br>";
+      });
+      document.getElementById("demo1").innerHTML = text;
+      const iterator = letters.entries();
+      
+      let text1 = "";
+      for (const entry of iterator) {
+        text1 += entry + "<br>";
+      }
+              document.getElementById("demo2").innerHTML = text1;
+
+    </script>
+  </body>
+</html>

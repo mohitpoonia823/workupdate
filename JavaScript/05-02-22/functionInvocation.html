@@ -7,23 +7,31 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>this keyword</h1>
+    <h2>JavaScript Functions</h2>
+
+    <p>myObject.fullName() will return John Doe:</p>
+
     <p id="demo"></p>
+    <p id="demo1"></p>
 
     <script>
-
-      // Create an object:
-      const person = {
+      const myObject = {
         firstName: "John",
         lastName: "Doe",
-        id: 5566,
-        fullName : function() {
+        fullName: function () {
           return this.firstName + " " + this.lastName;
-        }
+        },
       };
+      document.getElementById("demo").innerHTML = myObject.fullName();
 
-      // Display data from the object:
-      document.getElementById("demo").innerHTML = person.fullName();
+      const myObject1 = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function() {
+    return this;
+  }
+}
+document.getElementById("demo1").innerHTML = myObject1.fullName();
     </script>
   </body>
 </html>
