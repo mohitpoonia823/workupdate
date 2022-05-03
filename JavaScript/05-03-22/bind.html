@@ -7,34 +7,39 @@
     <title>Document</title>
   </head>
   <body>
-      <h1>function call</h1>
     <p id="demo"></p>
     <p id="demo1"></p>
 
     <script>
       const person = {
+        firstName: "John",
+        lastName: "Doe",
         fullName: function () {
           return this.firstName + " " + this.lastName;
         },
       };
+
+      const member = {
+        firstName: "Hege",
+        lastName: "Nilsen",
+      };
+
+      let fullName = person.fullName.bind(member);
+
+      document.getElementById("demo").innerHTML = fullName();
+
+      //   when using callback, this is lost. bind colve the problem
       const person1 = {
         firstName: "John",
         lastName: "Doe",
-      };
-      const person2 = {
-        firstName: "Mary",
-        lastName: "Doe",
-      };
-      document.getElementById("demo").innerHTML = person.fullName.call(person1);
-
-      const persons = {
-        fullName: function (city, country) {
-          return (
-            this.firstName + " " + this.lastName + "," + city + "," + country
-          );
+        display: function () {
+          let x = document.getElementById("demo1");
+          x.innerHTML = this.firstName + " " + this.lastName;
         },
       };
-      document.getElementById("demo1").innerHTML = persons.fullName.call(person1, "Oslo", "Norway"); 
+
+      let display = person1.display.bind(person1);
+      setTimeout(display, 3000);
     </script>
   </body>
 </html>
