@@ -36,7 +36,7 @@ const AvilableMeals = () => {
        id={meal.id}
       key={meal.id}
       name={meal.name}
-      description={meal.description}
+      updatedDescription={meal.description}
       price={meal.price}
     />
   ));
