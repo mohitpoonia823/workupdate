@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import useInput from '.../hooks/use-input';
 
 const SimpleInput = (props) => {
   const nameInputRef = useRef();
@@ -9,6 +10,14 @@ const SimpleInput = (props) => {
   const nameInputChangeHandler = (event) => {
     setEnteredName(event.target.value);
   };
+
+  const nameInputBlurHandler = event =>{
+    setEnteredNameTouched(true);
+    if (enteredName.trim() === "") {
+      setEnteredNameIsvalid(false);
+      return;
+    }
+  }
   const formSubmissionHandler = (event) => {
     event.preventDefault();
     setEnteredNameTouched(true);
@@ -36,6 +45,7 @@ const nameInputClass = nameInpoutIsValid ? 'form-control invalid' : 'form-contro
           type="text"
           id="name"
           onChange={nameInputChangeHandler}
+          // onBlur={}
           value={enteredName}
         />
         {nameInpoutIsValid && (
