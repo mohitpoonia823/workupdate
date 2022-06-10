@@ -21,7 +21,7 @@ const counterSlice = createSlice({
   }
 });
  
-
+counterSlice.actions.toogleCounter
 
 const store = configureStore({
   reducer: counterSlice.reducer
