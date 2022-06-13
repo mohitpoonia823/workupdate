@@ -1,9 +1,12 @@
 import { useState, useRef, useContext } from "react";
 import AuthContext from "../../store/auth-context";
+import { useHistory } from "react-router-dom";
 
 import classes from "./AuthForm.module.css";
 
 const AuthForm = () => {
+
+  const history = useHistory();
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
      
@@ -25,6 +28,7 @@ const AuthForm = () => {
     if (isLogin) {
       url =
         "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBtGv4qU6RX2i4nZ_VOqXthAFeAONvu_Ok";
+        console.log("logged successduly")
     } else {
       url =
         "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBtGv4qU6RX2i4nZ_VOqXthAFeAONvu_Ok ";
@@ -47,14 +51,15 @@ const AuthForm = () => {
         return res.json().then((data) => {
           // console.log(data);
           let errormessage = "Authentication failed";
-          if (data && data.error && data.error.message) {
-            errormessage = data.error.message;
-          }
+          // if (data && data.error && data.error.message) {
+          //   errormessage = data.error.message;
+          // }
           throw new Error(errormessage);
         });
       }
     }).then(data => {
       authctx.login(data.idToken);
+      history.replace('/');
     }).catch(err =>{
       alert(err.message);
  
