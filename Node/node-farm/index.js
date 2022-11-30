@@ -4,8 +4,6 @@ const url = require('url');
 const slugify = require('slugify');
 const replaceTemplate = require('./modules/replaceTemplate');
 
-/////////////////////////////////
-// FILES
 
 // Blocking, synchronous way
 // const textIn = fs.readFileSync('./txt/input.txt', 'utf-8');
@@ -16,7 +14,7 @@ const replaceTemplate = require('./modules/replaceTemplate');
 
 // Non-blocking, asynchronous way
 // fs.readFile('./txt/start.txt', 'utf-8', (err, data1) => {
-//   if (err) return console.log('ERROR! 💥');
+//   if (err) return console.log('ERROR! ');
 
 //   fs.readFile(`./txt/${data1}.txt`, 'utf-8', (err, data2) => {
 //     console.log(data2);
@@ -24,15 +22,14 @@ const replaceTemplate = require('./modules/replaceTemplate');
 //       console.log(data3);
 
 //       fs.writeFile('./txt/final.txt', `${data2}\n${data3}`, 'utf-8', err => {
-//         console.log('Your file has been written 😁');
+//         console.log('Your file has been written ');
 //       })
 //     });
 //   });
 // });
 // console.log('Will read file!');
 
-/////////////////////////////////
-// SERVER
+
 const tempOverview = fs.readFileSync(
   `${__dirname}/templates/template-overview.html`,
   'utf-8'
@@ -55,7 +52,7 @@ console.log(slugs);
 const server = http.createServer((req, res) => {
   const { query, pathname } = url.parse(req.url, true);
 
-  // Overview page
+  
   if (pathname === '/' || pathname === '/overview') {
     res.writeHead(200, {
       'Content-type': 'text/html'
@@ -65,7 +62,7 @@ const server = http.createServer((req, res) => {
     const output = tempOverview.replace('{%PRODUCT_CARDS%}', cardsHtml);
     res.end(output);
 
-    // Product page
+    
   } else if (pathname === '/product') {
     res.writeHead(200, {
       'Content-type': 'text/html'
