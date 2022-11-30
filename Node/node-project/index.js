@@ -4,8 +4,6 @@ const url = require('url');
 const slugify = require('slugify');
 const replaceTemplate = require('./modules/replaceTemplate');
 
-/////////////////////////////////
-// FILES
 
 // Blocking, synchronous way
 // const textIn = fs.readFileSync('./txt/input.txt', 'utf-8');
@@ -31,8 +29,7 @@ const replaceTemplate = require('./modules/replaceTemplate');
 // });
 // console.log('Will read file!');
 
-/////////////////////////////////
-// SERVER
+
 const tempOverview = fs.readFileSync(
   `${__dirname}/templates/template-overview.html`,
   'utf-8'
@@ -55,7 +52,7 @@ console.log(slugs);
 const server = http.createServer((req, res) => {
   const { query, pathname } = url.parse(req.url, true);
 
-  // Overview page
+  
   if (pathname === '/' || pathname === '/overview') {
     res.writeHead(200, {
       'Content-type': 'text/html'
@@ -65,7 +62,7 @@ const server = http.createServer((req, res) => {
     const output = tempOverview.replace('{%PRODUCT_CARDS%}', cardsHtml);
     res.end(output);
 
-    // Product page
+    
   } else if (pathname === '/product') {
     res.writeHead(200, {
       'Content-type': 'text/html'
